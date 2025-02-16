@@ -1,0 +1,86 @@
+body {
+    overflow-x:hidden;
+}
+
+.font-size-lg {
+    font-size: 1.1rem;
+}
+
+/* BIO SECTION */
+
+.hexagon {
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% -50%, 100% 50%, 50% 150%, 0 50%);
+    background: #2f3439;
+    -webkit-animation:spin 1.41s ease-in-out 1;
+    -moz-animation:spin 1.41s ease-in-out 1;
+    animation:spin 1.41s ease-in-out 1;
+    z-index: 1;
+    width: 46.18802vw;
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+#my-bio {
+    width:  100vw;
+    height: 100vh;
+}
+
+#my-bio .profile-photo {
+    /* The profile photo should take up more space on mobile */
+    width: 40vw;
+}
+
+.image-wrapper {
+    display: grid;
+}
+
+.photo-wrapper {
+    z-index: 3;
+}
+
+.image-wrapper .hexagon, .image-wrapper .photo-wrapper {
+    grid-column: 1;
+    grid-row: 1;;
+}
+
+/* ABOUT SECTION */
+
+#my-about {
+    width:  100vw;
+    height: 100vh;
+}
+
+/* WORK SECTION */
+
+.card {
+    margin-bottom: 1.6em;
+}
+
+@media only screen and (min-width: 768px) {
+    /* Make the profile photo smaller on desktop*/
+    #my-bio .profile-photo {
+        width: 31vh;
+    }
+
+    .hexagon {
+        width: 35.7957155vh;
+    }
+}
+
+/* CONTACT SECTION */
+
+#my-contact {
+    width:  100vw;
+    height: 100vh;
+}
